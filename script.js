@@ -7,8 +7,8 @@ blue = document.querySelector('#blue'),
 purple = document.querySelector('#purple'),
 GridSizeBtn = document.querySelector('#GridSize'),
 fragment = document.createDocumentFragment()
-let height = 10, width = 10, LW = height * width, i = 0,
-Box = 300, GridNum = 10 //changes based on whats input
+let height = 100, width = 100, LW = height * width, i = 0,
+Box = 300, GridNum = 100, DivItem //changes based on whats input
 let DivSize = Box/GridNum
 while (i < LW ) {
     const Div = document.createElement('div') //parent = grid
@@ -18,7 +18,13 @@ while (i < LW ) {
     Div.style.width = `${DivSize}px`
     Div.style.flexGrow = '1'
     Div.style.flexShrink = '1'
-
     grid.appendChild(Div)
+    //const GridDiv = document.querySelector('#GridDiv')
     i++
+        ChangeBackgroundColor(Div)
 }
+function ChangeBackgroundColor(x) {
+    x.addEventListener('mouseenter', () => {
+        x.style.backgroundColor = 'black'
+    })
+} 
