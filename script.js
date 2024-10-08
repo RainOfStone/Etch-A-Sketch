@@ -40,7 +40,7 @@ function ClearBackgroundColor(x) {
 }
 function ChangeGridSize1() {
     let GridPrompt = prompt('type a number from 2 and 100'),
-    GridPromptNum = Number(GridPrompt),
+    GridPromptNum = Number(GridPrompt)
     i = 0
     DivSize = Box/GridPromptNum
     height = GridPromptNum
