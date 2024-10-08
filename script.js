@@ -51,7 +51,6 @@ function ChangeGridSize1() {
     if (i == 0 && GridPromptNum > 1 && GridPromptNum < 101){
         while (grid.firstChild) {
             grid.removeChild(grid.firstChild)
-            i--
         }
         ChangeGridSize2 ()
     }
@@ -71,25 +70,25 @@ function ChangeGridSize2 () {
             i--
             grid.appendChild(Div)
         }
-    while (i < LW ) {
-        const Div = document.createElement('div') //parent = grid
-        Div.className = 'GridDiv'// min-height: 3px; min-width: 10px; max-height: 30.75px; max-width: 300.75px;
-        Div.style.backgroundColor = 'white'
-        Div.style.height = `${DivSize}px`
-        Div.style.width = `${DivSize}px`
-        Div.style.flexGrow = '1'
-        Div.style.flexShrink = '1'
-        grid.appendChild(Div)
-        //const GridDiv = document.querySelector('#GridDiv')
-        i++
-        btn.addEventListener('click', (event) => {
-                let target = event.target
-                switch(target.id) {
-                    case 'clear':
-                        ClearBackgroundColor(Div)
-                        break
+            while (i < LW ) {
+                const Div = document.createElement('div') //parent = grid
+                Div.className = 'GridDiv'// min-height: 3px; min-width: 10px; max-height: 30.75px; max-width: 300.75px;
+                Div.style.backgroundColor = 'white'
+                Div.style.height = `${DivSize}px`
+                Div.style.width = `${DivSize}px`
+                Div.style.flexGrow = '1'
+                Div.style.flexShrink = '1'
+                grid.appendChild(Div)
+                //const GridDiv = document.querySelector('#GridDiv')
+                i++
+                btn.addEventListener('click', (event) => {
+                        let target = event.target
+                        switch(target.id) {
+                            case 'clear':
+                                ClearBackgroundColor(Div)
+                                break
+                        }
+                })
+                    ChangeBackgroundColor(Div)
                 }
-        })
-            ChangeBackgroundColor(Div)
-        }
-}
+            } console.log(i)
