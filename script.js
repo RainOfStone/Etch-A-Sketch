@@ -37,7 +37,6 @@ function ChangeBackgroundColor(x) {
 } 
 function ClearBackgroundColor(x) {
     x.style.backgroundColor = 'white'
-    console.log(i, LW)
 }
 function ChangeGridSize1() {
     let GridPrompt = prompt('type a number from 2 and 100'),
