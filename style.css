@@ -24,32 +24,13 @@ body {
     flex-grow: none;
 }
 #buttons {
-    margin-top: 100px;
     background-color: white;
     display: flex;
     justify-content: space-between;
     width: 400px;
     height: 50px;
 }
-#red {
-    background-color: red;
-}
-#orange {
-    background-color: orange;
-}
-#yellow {
-    background-color: yellow;
-}
-#green {
-    background-color: green;
-}
-#blue {
-    background-color: blue;
-}
-#purple {
-    background-color: purple;
-}
-#red, #orange, #yellow, #green, #blue, #purple {
+#clear #GridSize {
     border: none;
     flex-grow: 1;
 }
