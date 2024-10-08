@@ -1,19 +1,15 @@
 const grid = document.querySelector('#grid'), 
-red = document.querySelector('#red'), 
-orange = document.querySelector('#orange'),
-yellow = document.querySelector('#yellow'),
-green = document.querySelector('#green'),
-blue = document.querySelector('#blue'),
-purple = document.querySelector('#purple'),
+btn = document.querySelector('#buttons'),
+clear = document.querySelector('#clear'), 
 GridSizeBtn = document.querySelector('#GridSize'),
 fragment = document.createDocumentFragment()
-let height = 100, width = 100, LW = height * width, i = 0,
-Box = 300, GridNum = 100, DivItem //changes based on whats input
-let DivSize = Box/GridNum
+let height = 16, width = 16, LW = height * width, i = 0,
+Box = 300, GridNum = 16, DivItem //changes based on whats input
+let DivSize = Box/GridNum, GridSizePrompt = prompt('type a number between 2 and 100:')
 while (i < LW ) {
     const Div = document.createElement('div') //parent = grid
     Div.className = 'GridDiv'// min-height: 3px; min-width: 10px; max-height: 30.75px; max-width: 300.75px;
-    Div.style.backgroundColor = 'red'
+    Div.style.backgroundColor = 'white'
     Div.style.height = `${DivSize}px`
     Div.style.width = `${DivSize}px`
     Div.style.flexGrow = '1'
@@ -21,6 +17,15 @@ while (i < LW ) {
     grid.appendChild(Div)
     //const GridDiv = document.querySelector('#GridDiv')
     i++
+    btn.addEventListener('click', (event) => {
+        let target = event.target
+        switch(target.id) {
+            case 'clear':
+                BGC = 'white'
+                ClearBackgroundColor(Div)
+                break
+        }
+    })
         ChangeBackgroundColor(Div)
 }
 function ChangeBackgroundColor(x) {
@@ -28,3 +33,9 @@ function ChangeBackgroundColor(x) {
         x.style.backgroundColor = 'black'
     })
 } 
+function ClearBackgroundColor(x) {
+    x.style.backgroundColor = 'white'
+}
+function ChangeGridSize (x) {
+    if (GridSizePrompt > 1 && GridSizePrompt < 101)
+}
