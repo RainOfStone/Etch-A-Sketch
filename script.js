@@ -71,9 +71,6 @@ function ChangeGridSize2 () {
             i--
             grid.appendChild(Div)
         }
-ChangeGridSize3 ()
-}
-function ChangeGridSize3() {
     while (i < LW ) {
         const Div = document.createElement('div') //parent = grid
         Div.className = 'GridDiv'// min-height: 3px; min-width: 10px; max-height: 30.75px; max-width: 300.75px;
@@ -95,4 +92,4 @@ function ChangeGridSize3() {
         })
             ChangeBackgroundColor(Div)
         }
-    }
+}
